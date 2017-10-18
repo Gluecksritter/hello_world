@@ -9,7 +9,7 @@ Trains...
 - Julian1307
 
 # LICENSE:
-GNU GENERAL PUBLIC LICENSE Version 3
+This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
 
 # LANGUAGE:
 - Code: JAVA
