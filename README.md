@@ -1,5 +1,8 @@
-# PROJECT: hello_world
+# PROJECT TITLE: hello_world
 hello world project
+
+# PROJECT DESCRIPTION:
+Trains...
 
 # TEAM MEMBERS:
 - Roman92116
