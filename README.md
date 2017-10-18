@@ -1,5 +1,9 @@
-# hello_world
+# PROJECT: hello_world
 hello world project
 
-# LICENSE
+# TEAM MEMBERS:
+Roman92116
+Julian1307
+
+# LICENSE:
 GNU GENERAL PUBLIC LICENSE Version 3
