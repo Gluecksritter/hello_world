@@ -12,4 +12,6 @@ Trains...
 GNU GENERAL PUBLIC LICENSE Version 3
 
 # LANGUAGE:
-- JAVA
+- Code: JAVA
+- Comments: German
+- Github Conversation: German
