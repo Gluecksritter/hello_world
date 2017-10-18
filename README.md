@@ -10,3 +10,6 @@ Trains...
 
 # LICENSE:
 GNU GENERAL PUBLIC LICENSE Version 3
+
+# LANGUAGE:
+- German
