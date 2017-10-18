@@ -13,5 +13,8 @@ This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
 
 # LANGUAGE:
 - Code: JAVA
-- Comments: German
+- Comments: English
 - Github Conversation: German
+
+# CODE OF CONDUCT:
+You can find the Twitter Community Code of Conduct as a sample in code_of_conduct.md
