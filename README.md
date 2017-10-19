@@ -7,13 +7,14 @@ Trains...
 # TEAM MEMBERS:
 - Roman92116
 - Julian1307
+- Gluecksritter
 
 # LICENSE:
 This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
 
 # LANGUAGE:
-- Code: JAVA
-- Comments: English
+- Code: Kotlin
+- Comments: German
 - Github Conversation: German
 
 # CODE OF CONDUCT:
