@@ -1,7 +1,7 @@
-## PROJECT Titel: hello_world
+## PROJEKT TITEL: hello_world
 hello world project
 
-## PROJECT Beschreibung:
+## PROJEKT BESCHREIBUNG:
 Hierbei handelt es sich um das Informatik Abschlussprojekt an der TH-Bingen. 
 Das Projekt ist in Gruppen zu bearbeiten. Diese Gruppe besteht aus drei Mitgliedern. 
 
@@ -9,14 +9,14 @@ Der Zeitraum zur Bearbeitung dieses Projekts erstreckt sich vom 15.10.17 um 18:0
 
 Die genaue Aufgabenstellung kann dem Punkt Aufgabenstellung, weiter unten in der README entnommen werden.
 
-## Gruppenmitglieder:
+## GRUPPENMITGLIEDER:
 - Roman92116
 - Julian1307
 
 ## LICENSE:
 This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
 
-## LANGUAGE:
+## SPRACHE:
 - Code: JAVA
 - Comments: English
 - Github Conversation: German
