@@ -1,33 +1,33 @@
-# PROJECT Titel: hello_world
+## PROJEKT TITEL: hello_world
 hello world project
 
-# PROJECT Beschreibung:
+## PROJEKT BESCHREIBUNG:
 Hierbei handelt es sich um das Informatik Abschlussprojekt an der TH-Bingen. 
 Das Projekt ist in Gruppen zu bearbeiten. Diese Gruppe besteht aus drei Mitgliedern. 
 
-Der Zeitraum zur Bearbeitung dieses Projekts erstreckt sich vom 15.10.17 um 18:00 Uhr bis zum 28.10.17 um 18:00 Uhr. 
+Der Zeitraum zur Bearbeitung dieses Projekts erstreckt sich vom 15.10.17 um 18:00 Uhr bis zum 02.11.17 um 18:00 Uhr. 
 
 Die genaue Aufgabenstellung kann dem Punkt Aufgabenstellung, weiter unten in der README entnommen werden.
 
-# Gruppenmitglieder:
+## GRUPPENMITGLIEDER:
 - Roman92116
 - Julian1307
 
-# LICENSE:
+## LICENSE:
 This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
 
-# LANGUAGE:
+## SPRACHE:
 - Code: JAVA
 - Comments: English
 - Github Conversation: German
 
-# CODE OF CONDUCT:
+## CODE OF CONDUCT:
 You can find the Twitter Community Code of Conduct as a sample in code_of_conduct.md
 
-# AUFGABENSTELLUNG:
+## AUFGABENSTELLUNG:
 Die folgende Aufgabenstellung ist aus der Plattform Olat übernommen
 
-Project Infrastructure
+#Project Infrastructure
 Create the project’s infrastructure:
 
 create a README.md describing the project and listing your names (they do not have to be real names if you don’t want; GitHub user names are fine as well)
@@ -46,7 +46,8 @@ When all that’s done:
 
 release version 1.0
 
-Create a Simple Rail Network Simulation
+#Create a Simple Rail Network Simulation
+
 Now that the infrastructure is set up, you can write some code. Please always include tests for your code and remember to use issues and pull requests, like described above. The goal is to implement a simple rail network simulation.
 
 create a simulation consisting of trains, schedules, rail segments, and a rail network; the network consists of a five rail segments that each has a capacity for three trains, each train has a schedule which determines on which segment it wants to drive; implement a single simulation step (which is supposed to represent a quarter hour), where:
@@ -62,7 +63,8 @@ When all that’s done:
 
 release version 2.0
 
-Extend Simulation By Making It More Configurable
+#Extend Simulation By Making It More Configurable
+
 make the number of segments configurable and parse the value from CSV; update scenario and external
 make the segments’ capacity configurable and parse the values from CSV; update scenario and external
 let the network keep track of the segments’ remaining and total capacity and write the results to console (scenario) or CSV (external)
@@ -73,7 +75,8 @@ When all that’s done:
 
 release version 3.0
 
-Extend Simulation to Cover an Entire Day
+#Extend Simulation to Cover an Entire Day
+
 base a train’s likelihood of getting delayed on its priority:
 give each train one of three priorities (include that in CSV input and update scenario and external)
 make sure that each increase in priority halves the relative likelihood of that train getting delayed (example: trains with prio 1, 2, 3 should have delay chances of ~57%, ~29%, ~14%; trains with prio 1, 2, 2, 3, 3 should have chances 40%, 20%, 20%, 10%, 10%)
