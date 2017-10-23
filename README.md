@@ -27,9 +27,8 @@ You can find the Twitter Community Code of Conduct as a sample in code_of_conduc
 # AUFGABENSTELLUNG:
 Die folgende Aufgabenstellung ist aus der Plattform Olat übernommen
 
-Block 1: "Project Infrastructure" - Aufbau der Projektinfrastruktur
-
-Create the project's infrastructure:
+Project Infrastructure
+Create the project’s infrastructure:
 
 create a README.md describing the project and listing your names (they do not have to be real names if you don’t want; GitHub user names are fine as well)
 add a license and document it in the README
@@ -39,72 +38,54 @@ comments can be English or German but must be consistent
 conversation on GitHub can be English or German but must be consistent (does not have to be the same as comments)
 research what a code of conduct is, how it relates to open source projects, and pick one; add it as a file to the project and document it in the README
 create a .gitignore file that prevents adding files/folders that are specific to IntelliJ IDEA and Maven
-create a Maven/Kotlin project that contains a simple HelloWorld.kt class with a main method printing "Hello, World." and that successfully builds a JAR
-integrate with Travis (I’ll do that - ping me on the issue when Maven is set up)
+create a Maven/Kotlin project that contains a simple HelloWorld.kt class with a main method printing "Hello, World." and that successfully builds a JAR; use de.thbingen.info2 as group ID and your group name as artifact ID
+integrate with Travis (I’ll tell you how to do that - ping me on the issue when Maven is set up)
 set up JUnit 4 by extending pom.xml and writing a small HelloWorldTest
 extend the README to tell users how to launch the application
+When all that’s done:
+
 release version 1.0
 
-Block 2: "Create a Simple Traffic Simulation" - Einfache Verkehrs-Simulation
+Create a Simple Rail Network Simulation
+Now that the infrastructure is set up, you can write some code. Please always include tests for your code and remember to use issues and pull requests, like described above. The goal is to implement a simple rail network simulation.
 
-Now that the infrastructure is set up, you can write some code. Please always include tests for your code and remember to use issues and pull requests, like described above:
-
-create a simulation consisting of cars and an abstract, monolithic road network (meaning it does not yet consist of individual roads - it’s just a single network); each car knows whether it wants to drive and the road network has a total capacity for cars; implement a single simulation step (which is supposed to represent one hour), where:
-each individual car announces whether it wants to drive or not
-the network tallies up the number of cars on the road and compares it to its own capacity
-the network decides for each car whether it drives or is delayed due to traffic jams; that decision is based on how many cars are on the road compared to the network’s capacity:
-less than or equal to capacity ~> all can drive
-over capacity ~> all are delayed
-write a scenario function that simulates a scenario with about a dozen cars
-let the cars keep track of whether they can drive or were delayed and print that information at the end of the simulation
-write the main program, which uses Univocity Parsers to parse input (cars and their interest to drive) and write resulting data (drive vs delay) as CSV (this does not touch on the scenario function, which should be kept around)
-extend the README by writing a user documentation, explaining users how to use the program
-When all that's done:
+create a simulation consisting of trains, schedules, rail segments, and a rail network; the network consists of a five rail segments that each has a capacity for three trains, each train has a schedule which determines on which segment it wants to drive; implement a single simulation step (which is supposed to represent a quarter hour), where:
+each individual train announces on which segment it wants to drive based on its schedule
+the network tallies up the number of trains on each segment and compares it to the capacity
+the network decides for each train whether it drives or is delayed due to the segment being at maximum capacity:
+less than or equal to capacity ~> all trains drive
+over capacity ~> all trains are delayed
+write a scenario function that simulates a scenario with about a dozen trains and call it from the main program
+let the trains keep track of whether they can drive or were delayed and, within the scenario funtion, print that information at the end of the simulation
+write an external function, which uses Univocity Parsers to parse input (trains and their schedules), triggers the simulation, and writes resulting data (drive vs delay) as CSV (this does not touch on the scenario function, which should be unchanged) and call external from main
+When all that’s done:
 
 release version 2.0
 
-Block 3: "Extend Simulation to Cover an Entire Day" - Erweiterte Simulation um einen Tag abzubilden
-
-randomize the decision for whether each individual car can drive or gets delayed; the chance for a delay depends on how many cars or on the road compared to the network’s capacity:
-less than at 50% capacity: 5% chance of delay
-less than at 70% capacity: 10% chance of delay
-less than at 90% capacity: 20% chance of delay
-less than at 110% capacity: 30% chance of delay
-less than at 125% capacity: 50% chance of delay
-less than at 150% capacity: 70% chance of delay
-above 150% capacity: 90% chance of delay
-cover an entire day by simulating 24 steps in a row:
-cars now need to know for each of the 24 hours whether they want to drive or not
-if a car gets delayed it can not “fulfill” it’s desire to drive, meaning it has to try to drive again in the next step (small example: a car wants to drive in steps 8 and 9 but gets delayed in 9; now it also wants to drive in step 10)
-extend result tracking by making sure that each car knows for every step whether it could drive or was delayed
-update the scenario function to the simulation’s new requirements
-extend CSV input/output to match the new requirements and results:
-extend input to include for each hour whether a car wants to drive
-extend output to include for each hour whether the car drove or was delayed
-update the user documentation to match the new program behavior
-When all that's done:
+Extend Simulation By Making It More Configurable
+make the number of segments configurable and parse the value from CSV; update scenario and external
+make the segments’ capacity configurable and parse the values from CSV; update scenario and external
+let the network keep track of the segments’ remaining and total capacity and write the results to console (scenario) or CSV (external)
+on each segment, only delay as many trains as are over capacity (example: if capacity is 3 and there are 5 trains, only delay 2 of them)
+randomize the decision which trains are delayed on any given segment; make sure that of all the trains that want to use a segment each is equally likely to be delayed
+extend the README by writing a user documentation, explaining users how to use the program
+When all that’s done:
 
 release version 3.0
 
-Block 4: "Extend Simulation with Various Participants" - Erweiterte Simulation mit verschiedenen Teilnehmern
-
-extend the simulation to allow for other traffic participants:
-create a suitable interface, of which the car is one implementation
-make sure the code simulating individual steps only uses that interface
-add implementations for trucks, trams, and bikes
-extend the scenario to include a total of about a dozen non-cars
-give each kind of traffic participant a different chance of getting delayed:
-cars keep the chances that were defined earlier
-for trucks, each individual chance is 5% higher than for cars
-for trams, each individual chance is half of that for cars
-for bikes, the chance is always 5% unless the network is over 150% capacity, in which case the chance increases to 10%.
-change how different kinds of traffic participants clog the road network:
-cars continue to “cost” 1 capacity
-trucks cost 3 capacity
-trams cost 5 capacity
-bikers cost 0.1 capacity
-extend CSV input to allow defining different participants
-update the user documentation to explain how to define input and read output
-When all that's done:
+Extend Simulation to Cover an Entire Day
+base a train’s likelihood of getting delayed on its priority:
+give each train one of three priorities (include that in CSV input and update scenario and external)
+make sure that each increase in priority halves the relative likelihood of that train getting delayed (example: trains with prio 1, 2, 3 should have delay chances of ~57%, ~29%, ~14%; trains with prio 1, 2, 2, 3, 3 should have chances 40%, 20%, 20%, 10%, 10%)
+cover an entire train-day (6am to 10pm) by simulating 64 steps in a row:
+trains now need to know for each of the steps, on which segment they want to drive
+if a train gets delayed it needs to complete that segment in the next simulation step, which means the unfulfilled part of its schedule gets shifted one step (example: wanted to drive at 0800 in #3, 0815 in #6, 0830 in #8; if it gets delayed at 0815, it’s new schedule is 0800 in #3, 0815 in #6, 0830 in #6, 0845 in #8)
+extend result tracking by making sure that each train knows for every step in which segment it was
+update the scenario function to the simulation’s new requirements
+extend CSV input/output and external to match the new requirements and results:
+extend input to include for each step in which segment a train wants to drive
+extend output to include for each step in which segment the train was
+extend the README by writing a user documentation, explaining users how to use the program
+When all that’s done:
 
 release version 4.0
