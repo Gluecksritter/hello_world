@@ -5,7 +5,7 @@ hello world project
 Hierbei handelt es sich um das Informatik Abschlussprojekt an der TH-Bingen. 
 Das Projekt ist in Gruppen zu bearbeiten. Diese Gruppe besteht aus drei Mitgliedern. 
 
-Der Zeitraum zur Bearbeitung dieses Projekts erstreckt sich vom 15.10.17 um 18:00 Uhr bis zum 28.10.17 um 18:00 Uhr. 
+Der Zeitraum zur Bearbeitung dieses Projekts erstreckt sich vom 15.10.17 um 18:00 Uhr bis zum 02.11.17 um 18:00 Uhr. 
 
 Die genaue Aufgabenstellung kann dem Punkt Aufgabenstellung, weiter unten in der README entnommen werden.
 
