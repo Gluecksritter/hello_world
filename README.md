@@ -11,14 +11,15 @@ Die genaue Aufgabenstellung kann dem Punkt Aufgabenstellung, weiter unten in der
 
 # GRUPPENMITGLIEDER:
 - Roman92116
-- Julian1307
+- Julian1307 
+- Gluecksritter
 
 # LICENSE:
 This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
 
 # SPRACHE:
-- Code: JAVA
-- Comments: English
+- Code: Kotlin
+- Comments: German
 - Github Conversation: German
 
 # CODE OF CONDUCT:
