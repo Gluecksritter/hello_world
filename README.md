@@ -1,7 +1,7 @@
-## PROJEKT TITEL: hello_world
+# PROJEKT TITEL: hello_world
 hello world project
 
-## PROJEKT BESCHREIBUNG:
+# PROJEKT BESCHREIBUNG:
 Hierbei handelt es sich um das Informatik Abschlussprojekt an der TH-Bingen. 
 Das Projekt ist in Gruppen zu bearbeiten. Diese Gruppe besteht aus drei Mitgliedern. 
 
@@ -9,25 +9,25 @@ Der Zeitraum zur Bearbeitung dieses Projekts erstreckt sich vom 15.10.17 um 18:0
 
 Die genaue Aufgabenstellung kann dem Punkt Aufgabenstellung, weiter unten in der README entnommen werden.
 
-## GRUPPENMITGLIEDER:
+# GRUPPENMITGLIEDER:
 - Roman92116
 - Julian1307
 
-## LICENSE:
+# LICENSE:
 This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
 
-## SPRACHE:
+# SPRACHE:
 - Code: JAVA
 - Comments: English
 - Github Conversation: German
 
-## CODE OF CONDUCT:
+# CODE OF CONDUCT:
 You can find the Twitter Community Code of Conduct as a sample in code_of_conduct.md
 
-## AUFGABENSTELLUNG:
+# AUFGABENSTELLUNG:
 Die folgende Aufgabenstellung ist aus der Plattform Olat übernommen
 
-#Project Infrastructure
+##Project Infrastructure
 Create the project’s infrastructure:
 
 create a README.md describing the project and listing your names (they do not have to be real names if you don’t want; GitHub user names are fine as well)
@@ -46,7 +46,7 @@ When all that’s done:
 
 release version 1.0
 
-#Create a Simple Rail Network Simulation
+##Create a Simple Rail Network Simulation
 
 Now that the infrastructure is set up, you can write some code. Please always include tests for your code and remember to use issues and pull requests, like described above. The goal is to implement a simple rail network simulation.
 
@@ -63,7 +63,7 @@ When all that’s done:
 
 release version 2.0
 
-#Extend Simulation By Making It More Configurable
+##Extend Simulation By Making It More Configurable
 
 make the number of segments configurable and parse the value from CSV; update scenario and external
 make the segments’ capacity configurable and parse the values from CSV; update scenario and external
@@ -75,7 +75,7 @@ When all that’s done:
 
 release version 3.0
 
-#Extend Simulation to Cover an Entire Day
+##Extend Simulation to Cover an Entire Day
 
 base a train’s likelihood of getting delayed on its priority:
 give each train one of three priorities (include that in CSV input and update scenario and external)
