@@ -1,4 +1,4 @@
-lanuage: java
+language: java
 
 sudo: required
 
@@ -6,14 +6,14 @@ dist: trusty
 
 jdk:
   - oraclejdk8
-  
+
 addons:
   apt:
     packages:
       - oracle-java8-installer
-      
+
 install: mvn --version
 
 script:
   - java -version
-  -mvn -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -B clean install
+  - mvn -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -B clean install
