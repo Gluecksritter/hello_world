@@ -117,7 +117,7 @@ When all that`s done:
     * trains now need to know for each of the steps, on which segment they want to drive
     * if a train gets delayed it needs to complete that segment in the next simulation step, 
       which means the unfulfilled part of its schedule gets shifted one step (example: 
-      wanted to drive at 0800 in #3, 0815 in #6, 0830 in #8; if it gets delayed at 0815, it�s 
+      wanted to drive at 0800 in #3, 0815 in #6, 0830 in #8; if it gets delayed at 0815, it`s 
       new schedule is 0800 in #3, 0815 in #6, 0830 in #6, 0845 in #8)
     * extend result tracking by making sure that each train knows for every step in which segment it was
     * update the scenario function to the simulation`s new requirements
