@@ -26,13 +26,13 @@ This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
 You can find the Twitter Community Code of Conduct as a sample in code_of_conduct.md
 
 # AUFGABENSTELLUNG:
-Die folgende Aufgabenstellung ist aus der Plattform Olat �bernommen
+Die folgende Aufgabenstellung ist aus der Plattform Olat übernommen
 
 ## Project Infrastructure
-Create the project�s infrastructure:
+Create the project`s infrastructure:
 
 * create a README.md describing the project and listing your names (they do not have to be
-  real names if you don�t want; GitHub user names are fine as well)
+  real names if you don`t want; GitHub user names are fine as well)
 * add a license and document it in the README
 * decide on a language (e.g. by discussing it on the issue that belongs to this task) and document it in the README:
     * code (e.g. classes and variables) needs to be English
@@ -45,12 +45,12 @@ Create the project�s infrastructure:
 * create a Maven/Kotlin project that contains a simple HelloWorld.kt class with a main
   method printing "Hello, World." and that successfully builds a JAR; use
   de.thbingen.info2 as group ID and your group name as artifact ID
-* integrate with Travis (I�ll tell you how to do that - ping me on the issue when Maven is set
+* integrate with Travis (I`ll tell you how to do that - ping me on the issue when Maven is set
   up)
 * set up JUnit 4 by extending pom.xml and writing a small HelloWorldTest
 * extend the README to tell users how to launch the application
 
-When all that�s done:
+When all that`s done:
 
 * release version 1.0
 
@@ -81,7 +81,7 @@ simple rail network simulation.
  does not touch on the scenario function, which should be unchanged) and call
  external from main
 
-When all that�s done:
+When all that`s done:
 
 * release version 2.0
 
@@ -89,9 +89,9 @@ When all that�s done:
 
 * make the number of segments configurable and parse the value from CSV; 
   update scenario and external
-* make the segments� capacity configurable and parse the values from CSV; 
+* make the segments` capacity configurable and parse the values from CSV; 
   update scenario and external
-* let the network keep track of the segments� remaining and total capacity and write the results 
+* let the network keep track of the segments` remaining and total capacity and write the results 
   to console (scenario) or CSV (external)
 * on each segment, only delay as many trains as are over capacity (example: if capacity is 3 
   and there are 5 trains, only delay 2 of them)
@@ -100,13 +100,13 @@ When all that�s done:
 * extend the README by writing a user documentation, explaining users how to use the 
   program
 
-When all that�s done:
+When all that`s done:
 
 * release version 3.0
 
 ## Extend Simulation to Cover an Entire Day
 
-* base a train�s likelihood of getting delayed on its priority:
+* base a train`s likelihood of getting delayed on its priority:
     * give each train one of three priorities (include that in CSV input and 
       update scenario and external)
     * make sure that each increase in priority halves the relative likelihood of that train 
@@ -120,13 +120,13 @@ When all that�s done:
       wanted to drive at 0800 in #3, 0815 in #6, 0830 in #8; if it gets delayed at 0815, it�s 
       new schedule is 0800 in #3, 0815 in #6, 0830 in #6, 0845 in #8)
     * extend result tracking by making sure that each train knows for every step in which segment it was
-    * update the scenario function to the simulation�s new requirements
+    * update the scenario function to the simulation`s new requirements
 * extend CSV input/output and external to match the new requirements and results:
     * extend input to include for each step in which segment a train wants to drive
     * extend output to include for each step in which segment the train was
 * extend the README by writing a user documentation, explaining users how to use the 
   program
 
-When all that�s done:
+When all that`s done:
 
 * release version 4.0
