@@ -21,11 +21,11 @@
         </dependency>
         <dependency>
 
-            <groupId>junit</groupId>
+		<groupId>junit</groupId>
 
-            <artifactId>junit</artifactId>
+		<artifactId>junit</artifactId>
 
-            <version>RELEASE</version>
+		<version>RELEASE</version>
 
         </dependency>
     </dependencies>
