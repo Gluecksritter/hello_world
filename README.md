@@ -1,4 +1,4 @@
-# PROJEKT TITEL: hello_world
+﻿# PROJEKT TITEL: hello_world
 hello world project
 
 # PROJEKT BESCHREIBUNG:
@@ -21,6 +21,15 @@ This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
 - Code: Kotlin
 - Comments: German
 - Github Conversation: German
+
+# Anleitung zur Programmausführung:
+Die Programmausführung kann durch die .jar Datei, die im Release vorliegt erfolgen.
+Dazu wird das entsprechende Release heruntergeladen, in dem die .jar-Datei ist. Diese .jar Datei kann mittels Windows PowerShell ausgeführt werden.
+Dazu gibt man folgendes ein:
+java -jar "C:\Users\Julian\Desktop\HalloTrain-1.0-SNAPSHOT-jar-with-dependencies.jar"
+Wobei der Dateipfad(in "..." eingefasst) angepasst werden muss, je nachdem wo die Datei abgespeichert wurde.
+Das bestätigt man schließlich mit der Entertaste, damit die Programmausführung erfolgt.
+Die Ausgabe des Programms erscheint daraufhin in der Konsole.
 
 # CODE OF CONDUCT:
 You can find the Twitter Community Code of Conduct as a sample in code_of_conduct.md
