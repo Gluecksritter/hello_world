@@ -5,9 +5,7 @@ import com.univocity.parsers.csv.CsvParser
 import com.univocity.parsers.csv.CsvParserSettings
 import com.univocity.parsers.csv.CsvWriter
 import com.univocity.parsers.csv.CsvWriterSettings
-import traffic_simulation.FileAccess
 
-class Main(){
 
     fun main(args: Array<String>){
         scenario()
@@ -66,32 +64,11 @@ class Main(){
 
     }
 
-    fun delayFunction(listTrains: List<Train>, listSegments: List<RailSegment>): List<RailSegment>{
-        for(train in listTrains){
-            var num: Int = train.schedule.railSegment
-            for(segment in listSegments){
-                if(segment.railID == num){
-                    segment.addTrain()
-                }
-            }
-        }
-        return listSegments
-    }
-
-    fun applyDelay(listTrains: List<Train>, listSegments: List<RailSegment>): List<Train>{
-        for(train in listTrains){
-            for(segment in listSegments){
-                if(train.schedule.railSegment == segment.railID && segment.delay){
-                    train.delayed = true
-                }
-            }
-        }
-
-        return listTrains
-    }
-
     fun printResults(text: String){
         println(text)
+    }
+
+    fun parseInputOfCSV(fileName: String): List<Train> {
     }
 
     fun external(){
@@ -127,5 +104,3 @@ class Main(){
         }
         csvWriter.writeRowsAndClose(vehicleRows)
     }
-
-}
