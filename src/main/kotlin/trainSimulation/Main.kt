@@ -5,7 +5,7 @@ import com.univocity.parsers.csv.CsvParser
 import com.univocity.parsers.csv.CsvParserSettings
 import com.univocity.parsers.csv.CsvWriter
 import com.univocity.parsers.csv.CsvWriterSettings
-
+import java.io.*
 
     fun main(args: Array<String>){
         scenario()
@@ -68,12 +68,35 @@ import com.univocity.parsers.csv.CsvWriterSettings
         println(text)
     }
 
-    fun parseInputOfCSV(fileName: String): List<Train> {
+    fun parseInputOfCSV(fileName: String): MutableList<Train> {
+        var trainListCSV: MutableList<Train> = mutableListOf()
+
+        var settings = CsvParserSettings()
+        settings.format.setLineSeparator("\n")
+        settings.isHeaderExtractionEnabled = true
+
+        var csvParser = CsvParser(settings)
+
+        var reader = FileAccess().getReader("/" + fileName)
+
+        var allRows: MutableList<Record> = csvParser.parseAllRecords(reader)
+
+        for (record in allRows) {
+            var id_String: String = record.values[0]
+            var schedule_String: String = record.values[1]
+
+            var id_Int: Int = id_String.toInt()
+            var schedule_Int: Int = schedule_String.toInt()
+
+            var scheduleDummy: Schedule = Schedule(schedule_Int)
+            trainListCSV.add(Train(trainID = id_Int, schedule = scheduleDummy))
+        }
+        return trainListCSV
     }
 
     fun external(){
         val railNetwork: RailNetwork = getRailNetwork()
-        var trainListCSV: List<Train> = parseInputOfCSV(fileName = "driveInterest.csv")
+        var trainListCSV: List<Train> = parseInputOfCSV(fileName = "../../resources/TrainSchedule.csv")
 
         railNetwork.railSegments = delayFunction(trainListCSV,railNetwork.railSegments)
 
