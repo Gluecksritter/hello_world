@@ -53,9 +53,9 @@ import java.io.*
 
         val railNetwork: RailNetwork = getRailNetwork()
 
-        railNetwork.railSegments = delayFunction(trainList, railNetwork.railSegments)
+        railNetwork.delayFunction(trainList, railNetwork.railSegments)
 
-        val processedTrainList: List<Train> = applyDelay(trainList,railNetwork.railSegments)
+        val processedTrainList: List<Train> = railNetwork.applyDelay(trainList,railNetwork.railSegments)
 
         for(train in trainList){
             var textDummy: String = "Train No. '${train.trainID}' is delayed: '${train.delayed}'"
@@ -98,9 +98,9 @@ import java.io.*
         val railNetwork: RailNetwork = getRailNetwork()
         var trainListCSV: List<Train> = parseInputOfCSV(fileName = "../../resources/TrainSchedule.csv")
 
-        railNetwork.railSegments = delayFunction(trainListCSV,railNetwork.railSegments)
+        railNetwork.railSegments = railNetwork.delayFunction(trainListCSV,railNetwork.railSegments)
 
-        trainListCSV = applyDelay(trainListCSV,railNetwork.railSegments)
+        trainListCSV = railNetwork.applyDelay(trainListCSV,railNetwork.railSegments)
 
         printResultsToCSV(trainListCSV)
     }
