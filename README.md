@@ -33,6 +33,9 @@ Wobei der Dateipfad(in "..." eingefasst) angepasst werden muss, je nachdem wo di
 Das bestätigt man schließlich mit der Entertaste, damit die Programmausführung erfolgt.
 Die Ausgabe des Programms erscheint daraufhin in der Konsole.
 
+# Benutzerdokumentation:
+//Hier kommt die Beschreibung zur Nutzung des Programms hin, bevor Release v3.0 erstellt wird.
+
 # CODE OF CONDUCT:
 You can find the Twitter Community Code of Conduct as a sample in code_of_conduct.md
 
