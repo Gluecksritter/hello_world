@@ -49,7 +49,7 @@ import java.io.*
         val train10: Train = Train(trainID = 10, schedule = schedule3)
         val train11: Train = Train(trainID = 11, schedule = schedule3)
 
-        val trainList: List<Train> = listOf(train1,train2,train3,train4,train5,train6,train7,train8,train9,train10,train11)
+        val trainList: List<Train> = listOf(train0,train1,train2,train3,train4,train5,train6,train7,train8,train9,train10,train11)
 
         val railNetwork: RailNetwork = getRailNetwork()
 
@@ -96,7 +96,7 @@ import java.io.*
 
     fun external(){
         val railNetwork: RailNetwork = getRailNetwork()
-        var trainListCSV: List<Train> = parseInputOfCSV(fileName = "../../resources/TrainSchedule.csv")
+        var trainListCSV: List<Train> = parseInputOfCSV(fileName = "TrainSchedule.csv")
 
         railNetwork.railSegments = railNetwork.delayFunction(trainListCSV,railNetwork.railSegments)
 
